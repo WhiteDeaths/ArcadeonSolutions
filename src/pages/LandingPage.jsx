@@ -34,12 +34,12 @@ export default function LandingPage() {
         zIndex: 1000,
         display: "flex",
         alignItems: "center",
-        justifyContent: "space-between",
+        justifyContent: "flex-start",
         padding: "0.7rem 2rem"
       }}>
         <div style={{ display: "flex", alignItems: "center", gap: "1.2rem" }}>
           <img src="/arcadeon-logo-text.svg" alt="Arcadeon Logo" style={{ height: "40px" }} />
-          <div style={{ display: "flex", gap: "1.2rem" }}>
+          <div style={{ display: "flex", gap: "0.8rem" }}>
             <button
               style={{
                 background: "none",
@@ -90,7 +90,8 @@ export default function LandingPage() {
             </button>
           </div>
         </div>
-        <div style={{ display: "flex", gap: "1.2rem" }}>
+        <div style={{ flex: "0 0 320px" }} />
+        <div style={{ display: "flex", gap: "0.8rem" }}>
           <button
             style={{
               background: "#222",
@@ -245,7 +246,7 @@ export default function LandingPage() {
             <h4 style={{ color: "#03fc62", fontWeight: "bold", marginBottom: "0.5rem" }}>Contact</h4>
             <div style={{ lineHeight: "1.5" }}>
               <a href="mailto:james.upson@arcadeon.co.uk" style={{ color: "#03fc62", textDecoration: "none", fontWeight: "bold" }}>james.upson@arcadeon.co.uk</a><br />
-              <span style={{ color: "#03fc62", fontWeight: "bold" }}>+1 (555) 123-4567</span>
+              <span style={{ color: "#03fc62", fontWeight: "bold" }}>+44 (555) 123-4567</span>
             </div>
           </div>
         </div>
