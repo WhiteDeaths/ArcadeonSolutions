@@ -38,6 +38,7 @@ export default function LandingPage() {
         justifyContent: "flex-end",
         padding: "0.7rem 2rem"
       }}>
+        <img src="/arcadeon-logo.svg" alt="Arcadeon Logo" style={{ height: "40px", marginRight: "1.5rem" }} />
         <div style={{ display: "flex", gap: "1.5rem" }}>
           <button
             style={{
@@ -204,7 +205,7 @@ export default function LandingPage() {
         <h2 style={{ color: "#03fc62", fontWeight: "bold", marginBottom: "1.5rem", fontSize: "2rem" }}>Get A Quote</h2>
         <p style={{ maxWidth: "700px", margin: "0 auto", fontSize: "1.1rem" }}>
           Ready to transform your IT infrastructure? Get in touch with our specialists to discuss your project requirements and discover how Arcadeon can accelerate your success.<br />
-          <a href="mailto:hello@arcadeon.com" style={{ color: "#03fc62", fontWeight: "bold", textDecoration: "none" }}>hello@arcadeon.com</a> | <span style={{ color: "#03fc62", fontWeight: "bold" }}>+1 (555) 123-4567</span>
+          <a href="mailto:james.upson@arcadeon.co.uk" style={{ color: "#03fc62", fontWeight: "bold", textDecoration: "none" }}>james.upson@arcadeon.co.uk</a> | <span style={{ color: "#03fc62", fontWeight: "bold" }}>+1 (555) 123-4567</span>
         </p>
       </div>
       <div style={{ maxWidth: "100%" }}>
@@ -256,7 +257,7 @@ export default function LandingPage() {
           <div>
             <h4 style={{ color: "#03fc62", fontWeight: "bold", marginBottom: "0.5rem" }}>Contact</h4>
             <div style={{ lineHeight: "1.5" }}>
-              <a href="mailto:hello@arcadeon.com" style={{ color: "#03fc62", textDecoration: "none", fontWeight: "bold" }}>hello@arcadeon.com</a><br />
+              <a href="mailto:james.upson@arcadeon.co.uk" style={{ color: "#03fc62", textDecoration: "none", fontWeight: "bold" }}>james.upson@arcadeon.co.uk</a><br />
               <span style={{ color: "#03fc62", fontWeight: "bold" }}>+1 (555) 123-4567</span>
             </div>
           </div>
