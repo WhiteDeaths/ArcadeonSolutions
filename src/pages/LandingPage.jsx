@@ -90,8 +90,8 @@ export default function LandingPage() {
             </button>
           </div>
         </div>
-        <div style={{ flex: "0 0 320px" }} />
-        <div style={{ display: "flex", gap: "0.8rem" }}>
+  <div style={{ flex: 1 }} />
+  <div style={{ display: "flex", gap: "0.8rem", flexWrap: "wrap" }}>
           <button
             style={{
               background: "#222",
