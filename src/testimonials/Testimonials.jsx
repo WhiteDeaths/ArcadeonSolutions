@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 
 const genericAvatar = "https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png";
 
@@ -42,6 +42,7 @@ const testimonials = [
 
 export default function Testimonials() {
   const marqueeRef = useRef(null);
+  const [hovered, setHovered] = useState(-1);
 
   useEffect(() => {
     const marquee = marqueeRef.current;
@@ -96,6 +97,7 @@ export default function Testimonials() {
             style={{
               background: "#333",
               border: "1px solid #03fc62",
+              borderTop: "3px solid #03fc62",
               borderRadius: "12px",
               padding: "1.2rem",
               display: "flex",
@@ -103,14 +105,15 @@ export default function Testimonials() {
               alignItems: "center",
               textDecoration: "none",
               color: "#fff",
-              boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
-              transition: "transform 0.15s",
+              boxShadow: hovered === i ? "0 6px 24px rgba(3,252,98,0.18)" : "0 2px 8px rgba(0,0,0,0.08)",
+              transition: "transform 0.15s, box-shadow 0.15s",
               minWidth: "270px",
               width: "320px",
-              textAlign: "center"
+              textAlign: "center",
+              transform: hovered === i ? "scale(1.04)" : "scale(1)"
             }}
-            onMouseOver={e => (e.currentTarget.style.transform = "scale(1.04)")}
-            onMouseOut={e => (e.currentTarget.style.transform = "scale(1)")}
+            onMouseOver={() => setHovered(i)}
+            onMouseOut={() => setHovered(-1)}
           >
             <img
               src={t.avatar}
