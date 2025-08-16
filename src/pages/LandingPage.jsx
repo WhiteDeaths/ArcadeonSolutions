@@ -25,68 +25,72 @@ export default function LandingPage() {
     }}>
       {/* Sticky Top Bar */}
       <div style={{
-        position: "sticky",
+        position: "fixed",
         top: 0,
         left: 0,
         width: "100%",
         background: "#222",
         borderBottom: "2px solid #03fc62",
-        zIndex: 100,
+        zIndex: 1000,
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
         padding: "0.7rem 2rem"
       }}>
-        <img src="/arcadeon-logo-text.svg" alt="Arcadeon Logo" style={{ height: "40px", marginRight: "1.2rem" }} />
-        <div style={{ display: "flex", gap: "0.8rem", flexWrap: "nowrap", overflowX: "auto", maxWidth: "62vw" }}>
-          <button
-            style={{
-              background: "none",
-              color: "#03fc62",
-              border: "none",
-              fontWeight: "bold",
-              fontSize: "1.1rem",
-              cursor: "pointer",
-              padding: "0.5rem 1rem",
-              borderRadius: "8px",
-              transition: "background 0.15s"
-            }}
-            onClick={() => scrollTo(servicesRef)}
-          >
-            Services
-          </button>
-          <button
-            style={{
-              background: "none",
-              color: "#03fc62",
-              border: "none",
-              fontWeight: "bold",
-              fontSize: "1.1rem",
-              cursor: "pointer",
-              padding: "0.5rem 1rem",
-              borderRadius: "8px",
-              transition: "background 0.15s"
-            }}
-            onClick={() => scrollTo(whyRef)}
-          >
-            Why Choose Us
-          </button>
-          <button
-            style={{
-              background: "none",
-              color: "#03fc62",
-              border: "none",
-              fontWeight: "bold",
-              fontSize: "1.1rem",
-              cursor: "pointer",
-              padding: "0.5rem 1rem",
-              borderRadius: "8px",
-              transition: "background 0.15s"
-            }}
-            onClick={() => scrollTo(quoteRef)}
-          >
-            Get A Quote
-          </button>
+        <div style={{ display: "flex", alignItems: "center", gap: "1.2rem" }}>
+          <img src="/arcadeon-logo-text.svg" alt="Arcadeon Logo" style={{ height: "40px" }} />
+          <div style={{ display: "flex", gap: "0.8rem" }}>
+            <button
+              style={{
+                background: "none",
+                color: "#03fc62",
+                border: "none",
+                fontWeight: "bold",
+                fontSize: "1.1rem",
+                cursor: "pointer",
+                padding: "0.5rem 1rem",
+                borderRadius: "8px",
+                transition: "background 0.15s"
+              }}
+              onClick={() => scrollTo(servicesRef)}
+            >
+              Services
+            </button>
+            <button
+              style={{
+                background: "none",
+                color: "#03fc62",
+                border: "none",
+                fontWeight: "bold",
+                fontSize: "1.1rem",
+                cursor: "pointer",
+                padding: "0.5rem 1rem",
+                borderRadius: "8px",
+                transition: "background 0.15s"
+              }}
+              onClick={() => scrollTo(whyRef)}
+            >
+              Why Choose Us
+            </button>
+            <button
+              style={{
+                background: "none",
+                color: "#03fc62",
+                border: "none",
+                fontWeight: "bold",
+                fontSize: "1.1rem",
+                cursor: "pointer",
+                padding: "0.5rem 1rem",
+                borderRadius: "8px",
+                transition: "background 0.15s"
+              }}
+              onClick={() => scrollTo(quoteRef)}
+            >
+              Get A Quote
+            </button>
+          </div>
+        </div>
+        <div style={{ display: "flex", gap: "0.8rem" }}>
           <button
             style={{
               background: "#222",
@@ -256,7 +260,6 @@ export default function LandingPage() {
         }}>
           <span>© 2024 Arcadeon. All rights reserved.</span>
           <span>
-            Made with <a href="https://app.emergent.sh/?utm_source=emergent-badge" style={{ color: "#03fc62", textDecoration: "none" }}>Emergent</a>
           </span>
         </div>
       </footer>
