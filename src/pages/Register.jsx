@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Setup2FA from "./Setup2FA";
 import { supabase } from "../supabaseClient";
 import speakeasy from "speakeasy";
-import { supabase } from "../supabaseClient";
 
 const supabaseUrl = 'https://stkfhbalhkhkftqdbnqd.supabase.co';
 const supabaseKey = '[you-key-here]'; // Get this from Supabase dashboard > Project Settings > API
