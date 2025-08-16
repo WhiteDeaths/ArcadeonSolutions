@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Setup2FA from "./Setup2FA";
 import { supabase } from "../supabaseClient";
-import speakeasy from "speakeasy";
 
 const supabaseUrl = 'https://stkfhbalhkhkftqdbnqd.supabase.co';
 const supabaseKey = '[you-key-here]'; // Get this from Supabase dashboard > Project Settings > API
@@ -71,13 +70,20 @@ export default function Register() {
         if (error) {
           setErrors({ email: error.message });
         } else {
-          // Generate TOTP secret
-          const totpSecret = speakeasy.generateSecret({ length: 20 });
-          setSecret(totpSecret.base32);
-          setUserId(data.user.id);
-          // Store secret in Supabase table user_2fa
-          await supabase.from('user_2fa').insert([{ user_id: data.user.id, secret: totpSecret.base32 }]);
-          setShow2FA(true);
+          // Request QR code from backend for 2FA setup
+          const response = await fetch("/api/setup-2fa", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ email: trimmedEmail })
+          });
+          const result = await response.json();
+          if (result.qr && result.secret) {
+            setSecret(result.secret);
+            setUserId(data.user.id);
+            setShow2FA(true);
+          } else {
+            setErrors({ email: result.error || "2FA setup failed." });
+          }
         }
       });
     }

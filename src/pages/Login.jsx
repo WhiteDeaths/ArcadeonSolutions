@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { supabase } from "../supabaseClient";
-import speakeasy from "speakeasy";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -26,30 +25,19 @@ export default function Login() {
       setLoading(false);
       return;
     }
-    // Fetch user's 2FA secret from Supabase
-    const { data: twofa, error: twofaError } = await supabase
-      .from('user_2fa')
-      .select('secret')
-      .eq('user_id', data.user.id)
-      .single();
-    if (twofaError || !twofa) {
-      setError("2FA setup not found. Please contact support.");
-      setLoading(false);
-      return;
-    }
-    // Verify 2FA token
-    const verified = speakeasy.totp.verify({
-      secret: twofa.secret,
-      encoding: "base32",
-      token
+    // Send login and token to backend for verification
+    const response = await fetch("/api/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, password, token })
     });
-    if (!verified) {
-      setError("Invalid 2FA code.");
-      setLoading(false);
-      return;
+    const result = await response.json();
+    if (result.success) {
+      setSuccess("Login successful!");
+      setTimeout(() => navigate("/dashboard"), 800);
+    } else {
+      setError(result.error || "Login failed.");
     }
-    setSuccess("Login successful!");
-    setTimeout(() => navigate("/dashboard"), 800);
     setLoading(false);
   };
 

@@ -1,28 +1,34 @@
 import React, { useState } from "react";
 import QRCode from "qrcode.react";
-import speakeasy from "speakeasy";
 
 export default function Setup2FA({ email, onComplete }) {
   const [token, setToken] = useState("");
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
-  const qrUri = `otpauth://totp/ArcadeonSolutions:${email}?secret=${secret}&issuer=ArcadeonSolutions`;
+  // Use QR code from backend
+  const [qrUri, setQrUri] = useState("");
+  React.useEffect(() => {
+    if (email && window.secret) {
+      setQrUri(`otpauth://totp/ArcadeonSolutions:${email}?secret=${window.secret}&issuer=ArcadeonSolutions`);
+    }
+  }, [email]);
 
-  const handleVerify = e => {
+  const handleVerify = async e => {
     e.preventDefault();
     setError("");
     setSuccess("");
-    // Verify token using speakeasy
-    const verified = speakeasy.totp.verify({
-      secret,
-      encoding: "base32",
-      token
+    // Send token to backend for verification
+    const response = await fetch("/api/verify-2fa", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, token })
     });
-    if (verified) {
+    const result = await response.json();
+    if (result.success) {
       setSuccess("2FA setup complete!");
       if (onComplete) onComplete();
     } else {
-      setError("Invalid code. Please try again.");
+      setError(result.error || "Invalid code. Please try again.");
     }
   };
 
