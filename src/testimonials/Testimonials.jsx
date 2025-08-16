@@ -70,7 +70,7 @@ export default function Testimonials() {
       borderRadius: "16px",
       padding: "2rem",
       boxShadow: "0 4px 24px rgba(0,0,0,0.2)",
-      maxWidth: "900px",
+      maxWidth: "1100px",
       margin: "2rem auto"
     }}>
       <h2 style={{ color: "#03fc62", textAlign: "center", marginBottom: "2rem", fontWeight: "bold" }}>
@@ -106,8 +106,8 @@ export default function Testimonials() {
               color: "#fff",
               boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
               transition: "transform 0.15s",
-              minWidth: "220px",
-              maxWidth: "250px"
+              minWidth: "270px",
+              maxWidth: "320px"
             }}
             onMouseOver={e => (e.currentTarget.style.transform = "scale(1.04)")}
             onMouseOut={e => (e.currentTarget.style.transform = "scale(1)")}
@@ -119,7 +119,7 @@ export default function Testimonials() {
             />
             <div style={{ fontWeight: "bold", color: "#03fc62", marginBottom: "0.3rem" }}>{t.name}</div>
             <div style={{ fontSize: "0.95rem", color: "#aaa", marginBottom: "0.7rem" }}>{t.handle}</div>
-            <div style={{ fontSize: "0.95rem", textAlign: "center", wordBreak: "break-word", lineHeight: "1.3", maxHeight: "3.5em", overflow: "hidden" }}>
+            <div style={{ fontSize: "0.85rem", textAlign: "center", wordBreak: "break-word", lineHeight: "1.3", maxHeight: "4.5em", overflow: "hidden" }}>
               {t.text}
             </div>
           </a>
