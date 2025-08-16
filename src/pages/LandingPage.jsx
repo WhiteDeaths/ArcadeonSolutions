@@ -37,60 +37,56 @@ export default function LandingPage() {
         justifyContent: "space-between",
         padding: "0.7rem 2rem"
       }}>
-        <div style={{ display: "flex", alignItems: "center", gap: "1.2rem" }}>
-          <img src="/arcadeon-logo-text.svg" alt="Arcadeon Logo" style={{ height: "40px" }} />
-          <div style={{ display: "flex", gap: "0.8rem" }}>
-            <button
-              style={{
-                background: "none",
-                color: "#03fc62",
-                border: "none",
-                fontWeight: "bold",
-                fontSize: "1.1rem",
-                cursor: "pointer",
-                padding: "0.5rem 1rem",
-                borderRadius: "8px",
-                transition: "background 0.15s"
-              }}
-              onClick={() => scrollTo(servicesRef)}
-            >
-              Services
-            </button>
-            <button
-              style={{
-                background: "none",
-                color: "#03fc62",
-                border: "none",
-                fontWeight: "bold",
-                fontSize: "1.1rem",
-                cursor: "pointer",
-                padding: "0.5rem 1rem",
-                borderRadius: "8px",
-                transition: "background 0.15s"
-              }}
-              onClick={() => scrollTo(whyRef)}
-            >
-              Why Choose Us
-            </button>
-            <button
-              style={{
-                background: "none",
-                color: "#03fc62",
-                border: "none",
-                fontWeight: "bold",
-                fontSize: "1.1rem",
-                cursor: "pointer",
-                padding: "0.5rem 1rem",
-                borderRadius: "8px",
-                transition: "background 0.15s"
-              }}
-              onClick={() => scrollTo(quoteRef)}
-            >
-              Get A Quote
-            </button>
-          </div>
-        </div>
-        <div style={{ display: "flex", gap: "0.8rem" }}>
+        <img src="/arcadeon-logo-text.svg" alt="Arcadeon Logo" style={{ height: "40px", marginRight: "1.2rem" }} />
+        <div style={{ display: "flex", gap: "0.8rem", flexWrap: "nowrap", overflowX: "auto", maxWidth: "62vw" }}>
+          <button
+            style={{
+              background: "none",
+              color: "#03fc62",
+              border: "none",
+              fontWeight: "bold",
+              fontSize: "1.1rem",
+              cursor: "pointer",
+              padding: "0.5rem 1rem",
+              borderRadius: "8px",
+              transition: "background 0.15s"
+            }}
+            onClick={() => scrollTo(servicesRef)}
+          >
+            Services
+          </button>
+          <button
+            style={{
+              background: "none",
+              color: "#03fc62",
+              border: "none",
+              fontWeight: "bold",
+              fontSize: "1.1rem",
+              cursor: "pointer",
+              padding: "0.5rem 1rem",
+              borderRadius: "8px",
+              transition: "background 0.15s"
+            }}
+            onClick={() => scrollTo(whyRef)}
+          >
+            Why Choose Us
+          </button>
+          <button
+            style={{
+              background: "none",
+              color: "#03fc62",
+              border: "none",
+              fontWeight: "bold",
+              fontSize: "1.1rem",
+              cursor: "pointer",
+              padding: "0.5rem 1rem",
+              borderRadius: "8px",
+              transition: "background 0.15s"
+            }}
+            onClick={() => scrollTo(quoteRef)}
+          >
+            Get A Quote
+          </button>
           <button
             style={{
               background: "#222",
