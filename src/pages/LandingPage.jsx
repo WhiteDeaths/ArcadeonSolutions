@@ -19,7 +19,6 @@ export default function LandingPage() {
     <div style={{
       minHeight: "100vh",
       background: "#181818",
-      position: "relative",
       fontFamily: "Open Sans, Arial, Helvetica, sans-serif",
       overflowX: "hidden",
       width: "100%"
@@ -38,8 +37,8 @@ export default function LandingPage() {
         justifyContent: "space-between",
         padding: "0.7rem 2rem"
       }}>
-        <img src="/arcadeon-logo-text.svg" alt="Arcadeon Logo" style={{ height: "40px" }} />
-        <div style={{ display: "flex", gap: "0.8rem", flexWrap: "nowrap", overflowX: "auto", maxWidth: "70vw" }}>
+  <img src="/arcadeon-logo-text.svg" alt="Arcadeon Logo" style={{ height: "40px", marginRight: "1.2rem" }} />
+  <div style={{ display: "flex", gap: "0.8rem", flexWrap: "nowrap", overflowX: "auto", maxWidth: "62vw" }}>
           <button
             style={{
               background: "none",
