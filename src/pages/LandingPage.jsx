@@ -35,7 +35,8 @@ export default function LandingPage() {
         display: "flex",
         alignItems: "center",
         justifyContent: "flex-start",
-        padding: "0.7rem 2rem"
+        padding: "0.7rem 1rem",
+        flexWrap: "wrap"
       }}>
         <div style={{ display: "flex", alignItems: "center", gap: "1.2rem" }}>
           <img src="/arcadeon-logo-text.svg" alt="Arcadeon Logo" style={{ height: "40px" }} />
@@ -91,7 +92,7 @@ export default function LandingPage() {
           </div>
         </div>
   <div style={{ flex: 1 }} />
-  <div style={{ display: "flex", gap: "0.8rem", flexWrap: "wrap" }}>
+  <div style={{ display: "flex", gap: "0.8rem", flexWrap: "wrap", minWidth: "180px" }}>
           <button
             style={{
               background: "#222",
