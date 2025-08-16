@@ -1,17 +1,9 @@
 import React, { useState } from "react";
-import { QRCode } from "qrcode.react";
 
 export default function Setup2FA({ email, onComplete }) {
   const [token, setToken] = useState("");
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
-  // Use QR code from backend
-  const [qrUri, setQrUri] = useState("");
-  React.useEffect(() => {
-    if (email && window.secret) {
-      setQrUri(`otpauth://totp/ArcadeonSolutions:${email}?secret=${window.secret}&issuer=ArcadeonSolutions`);
-    }
-  }, [email]);
 
   const handleVerify = async e => {
     e.preventDefault();
@@ -35,10 +27,7 @@ export default function Setup2FA({ email, onComplete }) {
   return (
     <div style={{ textAlign: "center", color: "#fff", padding: "2rem" }}>
       <h2 style={{ color: "#03fc62", marginBottom: "1.2rem" }}>Connect Your Account to a 2FA Mobile App</h2>
-      <p>Scan the QR code below with your authenticator app (Google Authenticator, Authy, etc.), then enter the 6-digit code to verify.</p>
-      <div style={{ margin: "2rem auto" }}>
-        <QRCode value={qrUri} size={180} bgColor="#181818" fgColor="#03fc62" />
-      </div>
+  <p>Enter the 6-digit code from your authenticator app to verify your 2FA setup.</p>
       <form onSubmit={handleVerify} style={{ marginTop: "2rem" }}>
         <input
           type="text"
