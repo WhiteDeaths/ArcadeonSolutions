@@ -34,7 +34,7 @@ export default function LandingPage() {
         zIndex: 1000,
         display: "flex",
         alignItems: "center",
-        justifyContent: "space-between",
+        justifyContent: "flex-start",
         padding: "0.7rem 2rem"
       }}>
         <div style={{ display: "flex", alignItems: "center", gap: "1.2rem" }}>
@@ -90,7 +90,8 @@ export default function LandingPage() {
             </button>
           </div>
         </div>
-  <div style={{ display: "flex", gap: "0.8rem", marginLeft: "6rem" }}>
+        <div style={{ flex: "0 0 320px" }} />
+        <div style={{ display: "flex", gap: "0.8rem" }}>
           <button
             style={{
               background: "#222",
