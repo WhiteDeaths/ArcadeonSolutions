@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import QRCode from "qrcode.react";
+import { QRCode } from "qrcode.react";
 
 export default function Setup2FA({ email, onComplete }) {
   const [token, setToken] = useState("");
