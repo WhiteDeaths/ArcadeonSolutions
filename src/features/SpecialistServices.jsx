@@ -41,7 +41,7 @@ export default function SpecialistServices() {
       padding: "3rem 0",
       color: "#fff"
     }}>
-  <h2 style={{ textAlign: "center", color: "#fff", fontWeight: "bold", marginBottom: "2.5rem", fontSize: "2rem" }}>
+      <h2 style={{ textAlign: "center", color: "#03fc62", fontWeight: "bold", marginBottom: "2.5rem", fontSize: "2rem" }}>
         Our Specialist Services
       </h2>
       <div style={{
@@ -55,7 +55,8 @@ export default function SpecialistServices() {
             key={service.title}
             style={{
               background: "#222",
-              border: "2px solid #222",
+              border: "2px solid #03fc62",
+              borderTop: "4px solid #03fc62",
               borderRadius: "16px",
               boxShadow: hovered === i ? "0 8px 32px rgba(3,252,98,0.18)" : "0 2px 12px rgba(0,0,0,0.12)",
               transition: "transform 0.18s, box-shadow 0.18s",
@@ -76,7 +77,7 @@ export default function SpecialistServices() {
             <ul style={{ listStyle: "none", padding: 0, margin: 0, color: "#fff", fontSize: "0.98rem", textAlign: "left", width: "100%" }}>
               {service.bullets.map((b, idx) => (
                 <li key={idx} style={{ marginBottom: "0.5rem", paddingLeft: "0.5rem", position: "relative", color: "#fff" }}>
-                  <span style={{ color: "#fff", fontWeight: "bold", marginRight: "0.5rem" }}>•</span>{b}
+                  <span style={{ color: "#03fc62", fontWeight: "bold", marginRight: "0.5rem" }}>•</span>{b}
                 </li>
               ))}
             </ul>
