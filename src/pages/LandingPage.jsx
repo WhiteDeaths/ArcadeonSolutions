@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import Testimonials from "../testimonials/Testimonials";
 
 export default function LandingPage() {
   const navigate = useNavigate();
@@ -7,9 +8,10 @@ export default function LandingPage() {
   return (
     <div style={{
       minHeight: "100vh",
-      background: "#333333",
+      background: "#181818", // deeper black
       position: "relative",
-      fontFamily: "sans-serif"
+      fontFamily: "sans-serif",
+      overflowX: "hidden"
     }}>
       {/* Accents */}
       <div style={{
@@ -71,10 +73,14 @@ export default function LandingPage() {
       <div style={{
         color: "#fff",
         textAlign: "center",
-        marginTop: "20vh"
+        marginTop: "18vh",
+        marginBottom: "2vh"
       }}>
         <h1 style={{ fontWeight: "bold", fontSize: "2.5rem" }}>Welcome to Arcadeon Solutions</h1>
         <p style={{ fontSize: "1.2rem", color: "#03fc62" }}>Modern solutions for your business needs.</p>
+      </div>
+      <div style={{ maxWidth: "100vw", overflow: "hidden" }}>
+        <Testimonials />
       </div>
     </div>
   );
