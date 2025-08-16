@@ -45,7 +45,7 @@ export default function LandingPage() {
             <button
               style={{
                 background: "none",
-                color: "#03fc62",
+                color: "#fff",
                 border: "none",
                 fontWeight: "bold",
                 fontSize: "1.1rem",
@@ -61,7 +61,7 @@ export default function LandingPage() {
             <button
               style={{
                 background: "none",
-                color: "#03fc62",
+                color: "#fff",
                 border: "none",
                 fontWeight: "bold",
                 fontSize: "1.1rem",
@@ -77,7 +77,7 @@ export default function LandingPage() {
             <button
               style={{
                 background: "none",
-                color: "#03fc62",
+                color: "#fff",
                 border: "none",
                 fontWeight: "bold",
                 fontSize: "1.1rem",
@@ -97,7 +97,7 @@ export default function LandingPage() {
           <button
             style={{
               background: "#222",
-              color: "#03fc62",
+              color: "#fff",
               border: "1px solid #03fc62",
               borderRadius: "8px",
               padding: "0.5rem 1.2rem",
@@ -112,7 +112,7 @@ export default function LandingPage() {
           <button
             style={{
               background: "#222",
-              color: "#03fc62",
+              color: "#fff",
               border: "1px solid #03fc62",
               borderRadius: "8px",
               padding: "0.5rem 1.2rem",
