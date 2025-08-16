@@ -77,7 +77,7 @@ export default function LandingPage() {
         marginBottom: "2vh"
       }}>
         <h1 style={{ fontWeight: "bold", fontSize: "2.5rem" }}>Welcome to Arcadeon Solutions</h1>
-        <p style={{ fontSize: "1.2rem", color: "#03fc62" }}>Modern solutions for your business needs.</p>
+        <p style={{ fontSize: "1.2rem", color: "#fff" }}>Modern solutions for your business needs.</p>
       </div>
       <div style={{ maxWidth: "100vw", overflow: "hidden" }}>
         <Testimonials />

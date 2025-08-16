@@ -1,8 +1,6 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 
-export default function Auth() {
-  const navigate = useNavigate();
+export default function Register() {
   return (
     <div style={{
       minHeight: "100vh",
@@ -58,7 +56,7 @@ export default function Auth() {
             zIndex: -1
           }} />
           <div style={{ width: "100%", textAlign: "center" }}>
-            <h2 style={{ color: "#fff", marginTop: 30, marginBottom: -20 }}>Sign In / Create Account</h2>
+            <h2 style={{ color: "#fff", marginTop: 30, marginBottom: -20 }}>Create an Account</h2>
             <form style={{ display: "flex", flexDirection: "column", marginTop: 30 }}>
               <input
                 type="text"
@@ -68,6 +66,22 @@ export default function Auth() {
                 style={{
                   padding: "14px 12px",
                   marginTop: 30,
+                  border: "none",
+                  borderRadius: 10,
+                  background: "transparent",
+                  border: "1px solid #03fc62",
+                  color: "#fff",
+                  fontSize: 15
+                }}
+              />
+              <input
+                type="email"
+                name="email"
+                required
+                placeholder="Email Address"
+                style={{
+                  padding: "14px 12px",
+                  marginTop: 24,
                   border: "none",
                   borderRadius: 10,
                   background: "transparent",
@@ -92,11 +106,6 @@ export default function Auth() {
                   fontSize: 15
                 }}
               />
-              <div style={{ display: "flex", alignItems: "center", marginTop: 22, fontSize: 13, color: "white" }}>
-                <input type="checkbox" id="remember" name="remember" style={{ marginRight: 7, marginTop: 0 }} />
-                <label htmlFor="remember">Remember me</label>
-                <a href="#" style={{ textDecoration: "none", color: "#03fc62", marginLeft: "auto" }}>Forgot Password?</a>
-              </div>
               <button
                 type="submit"
                 style={{
@@ -111,11 +120,8 @@ export default function Auth() {
                   fontSize: 16
                 }}
               >
-                Login
+                Register
               </button>
-              <p style={{ fontSize: 13, color: "#fff", marginTop: 22 }}>
-                Don't have an account? <span style={{ textDecoration: "none", color: "#03fc62", fontWeight: "bold", cursor: "pointer" }} onClick={() => navigate("/register")}>Register</span>
-              </p>
             </form>
           </div>
         </div>

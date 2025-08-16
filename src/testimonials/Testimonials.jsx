@@ -106,7 +106,8 @@ export default function Testimonials() {
               boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
               transition: "transform 0.15s",
               minWidth: "270px",
-              width: "320px"
+              width: "320px",
+              textAlign: "center"
             }}
             onMouseOver={e => (e.currentTarget.style.transform = "scale(1.04)")}
             onMouseOut={e => (e.currentTarget.style.transform = "scale(1)")}
@@ -118,7 +119,7 @@ export default function Testimonials() {
             />
             <div style={{ fontWeight: "bold", color: "#03fc62", marginBottom: "0.3rem" }}>{t.name}</div>
             <div style={{ fontSize: "0.95rem", color: "#aaa", marginBottom: "0.7rem" }}>{t.handle}</div>
-            <p style={{ fontSize: "1rem", textAlign: "left", wordBreak: "break-word", lineHeight: "1.5", margin: 0, whiteSpace: "normal" }}>
+            <p style={{ fontSize: "1rem", textAlign: "center", wordBreak: "break-word", lineHeight: "1.5", margin: 0, whiteSpace: "normal" }}>
               {t.text}
             </p>
           </a>
