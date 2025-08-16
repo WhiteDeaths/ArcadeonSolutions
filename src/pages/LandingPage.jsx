@@ -20,7 +20,9 @@ export default function LandingPage() {
       minHeight: "100vh",
       background: "#181818",
       position: "relative",
-      fontFamily: "sans-serif"
+      fontFamily: "sans-serif",
+      overflowX: "hidden",
+      width: "100%"
     }}>
       {/* Sticky Top Bar */}
       <div style={{
@@ -33,7 +35,7 @@ export default function LandingPage() {
         zIndex: 100,
         display: "flex",
         alignItems: "center",
-        justifyContent: "space-between",
+        justifyContent: "flex-end",
         padding: "0.7rem 2rem"
       }}>
         <div style={{ display: "flex", gap: "1.5rem" }}>
@@ -85,8 +87,6 @@ export default function LandingPage() {
           >
             Get A Quote
           </button>
-        </div>
-        <div style={{ display: "flex", gap: "0.7rem" }}>
           <button
             style={{
               background: "#222",
@@ -199,9 +199,7 @@ export default function LandingPage() {
           Rapid project initiation and agile delivery methodology ensuring your solutions are delivered faster than ever.
         </p>
       </div>
-      <div style={{ maxWidth: "100%" }}>
-        <Testimonials />
-      </div>
+  // ...existing code...
       {/* Get A Quote Section */}
       <div ref={quoteRef} style={{ padding: "3rem 0", background: "#181818", color: "#fff", textAlign: "center" }}>
         <h2 style={{ color: "#03fc62", fontWeight: "bold", marginBottom: "1.5rem", fontSize: "2rem" }}>Get A Quote</h2>
