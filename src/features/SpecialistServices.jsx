@@ -56,7 +56,6 @@ export default function SpecialistServices() {
             style={{
               background: "#222",
               border: "2px solid #03fc62",
-              borderTop: "4px solid #03fc62",
               borderRadius: "16px",
               boxShadow: hovered === i ? "0 8px 32px rgba(3,252,98,0.18)" : "0 2px 12px rgba(0,0,0,0.12)",
               transition: "transform 0.18s, box-shadow 0.18s",
