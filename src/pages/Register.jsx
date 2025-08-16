@@ -173,7 +173,6 @@ export default function Register() {
                     style={{
                       padding: "14px 12px",
                       marginTop: 24,
-                      border: "none",
                       borderRadius: 10,
                       background: "transparent",
                       border: errors.email ? "2px solid #ff4d4f" : "1px solid #03fc62",
@@ -194,7 +193,6 @@ export default function Register() {
                     style={{
                       padding: "14px 12px",
                       marginTop: 24,
-                      border: "none",
                       borderRadius: 10,
                       background: "transparent",
                       border: errors.password ? "2px solid #ff4d4f" : "1px solid #03fc62",
