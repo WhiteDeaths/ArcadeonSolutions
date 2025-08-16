@@ -38,8 +38,9 @@ export default function LandingPage() {
         justifyContent: "flex-end",
         padding: "0.7rem 2rem"
       }}>
-  <img src="/arcadeon-logo-text.svg" alt="Arcadeon Logo" style={{ height: "40px", marginRight: "1.5rem" }} />
-        <div style={{ display: "flex", gap: "1.5rem" }}>
+        <img src="/arcadeon-logo-text.svg" alt="Arcadeon Logo" style={{ height: "40px", marginRight: "2.5rem" }} />
+        <div style={{ flex: 1 }} />
+        <div style={{ display: "flex", gap: "1.1rem", flexWrap: "nowrap" }}>
           <button
             style={{
               background: "none",
@@ -271,7 +272,7 @@ export default function LandingPage() {
           fontSize: "0.95rem",
           color: "#aaa"
         }}>
-          <span>© 2025 Arcadeon. All rights reserved.</span>
+          <span>© 2024 Arcadeon. All rights reserved.</span>
           <span>
             Made with <a href="https://app.emergent.sh/?utm_source=emergent-badge" style={{ color: "#03fc62", textDecoration: "none" }}>Emergent</a>
           </span>
