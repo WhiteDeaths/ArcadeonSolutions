@@ -1,4 +1,5 @@
 import React from "react";
+import "./sage-font.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
 import Auth from "./pages/Auth";

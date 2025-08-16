@@ -110,7 +110,8 @@ export default function Testimonials() {
               minWidth: "270px",
               width: "320px",
               textAlign: "center",
-              transform: hovered === i ? "scale(1.04)" : "scale(1)"
+              transform: hovered === i ? "scale(1.04)" : "scale(1)",
+              boxSizing: "border-box"
             }}
             onMouseOver={() => setHovered(i)}
             onMouseOut={() => setHovered(-1)}

@@ -199,7 +199,6 @@ export default function LandingPage() {
           Rapid project initiation and agile delivery methodology ensuring your solutions are delivered faster than ever.
         </p>
       </div>
-  // ...existing code...
       {/* Get A Quote Section */}
       <div ref={quoteRef} style={{ padding: "3rem 0", background: "#181818", color: "#fff", textAlign: "center" }}>
         <h2 style={{ color: "#03fc62", fontWeight: "bold", marginBottom: "1.5rem", fontSize: "2rem" }}>Get A Quote</h2>

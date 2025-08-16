@@ -1,0 +1,6 @@
+/* Import Sage font (Sage uses "Sage UI" which is a custom font, but falls back to Arial, Helvetica, sans-serif) */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+body, html, #root {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif !important;
+}
