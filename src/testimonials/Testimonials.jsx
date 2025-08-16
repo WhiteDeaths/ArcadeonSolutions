@@ -1,42 +1,42 @@
 import React, { useRef, useEffect } from "react";
 
-const genericAvatar = "https://ui-avatars.com/api/?background=222&color=03fc62&name=User";
+const genericAvatar = "https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png";
 
 const testimonials = [
   {
     name: "Morgan Linton",
     avatar: genericAvatar,
     handle: "@morganlinton",
-    text: "If you're coding with AI, and haven't discovered @firecrawl_dev yet, prepare to have your mind blown 🤯",
-    link: "https://x.com/morganlinton/status/1839454165703204955"
+    text: "Arcadeon's response time was amazing. I got support within minutes!",
+    link: "#"
   },
   {
     name: "Chris DeWeese",
     avatar: genericAvatar,
     handle: "@ChrisDevApps",
-    text: "Started using @firecrawl_dev for a project, I wish I used this sooner.",
-    link: "https://x.com/ChrisDevApps/status/1853587120406876601"
+    text: "The AI solution tools from Arcadeon are truly next-level. Highly recommend!",
+    link: "#"
   },
   {
     name: "Bardia Pourvakil",
     avatar: genericAvatar,
     handle: "@thepericulum",
-    text: "The Firecrawl team ships. I wanted types for their node SDK, and less than an hour later, I got them.",
-    link: "https://twitter.com/thepericulum/status/1781397799487078874"
+    text: "Arcadeon helped automate my workflow and saved me hours every week.",
+    link: "#"
   },
   {
     name: "Tom Reppelin",
     avatar: genericAvatar,
     handle: "@TomReppelin",
-    text: "I found gold today. Thank you @firecrawl_dev",
-    link: "https://x.com/TomReppelin/status/1844382491014201613"
+    text: "Super easy integration and fantastic customer service from Arcadeon.",
+    link: "#"
   },
   {
     name: "latentsauce 🧘🏽",
     avatar: genericAvatar,
     handle: "@latentsauce",
-    text: "Firecrawl simplifies data preparation significantly, exactly what I was hoping for. Thank you Firecrawl ❤️❤️❤️",
-    link: "https://twitter.com/latentsauce/status/1781738253927735331"
+    text: "Arcadeon's platform is intuitive and powerful. My team loves it!",
+    link: "#"
   }
 ];
 
@@ -81,7 +81,6 @@ export default function Testimonials() {
         style={{
           display: "flex",
           overflowX: "auto",
-          whiteSpace: "nowrap",
           gap: "1.5rem",
           scrollbarWidth: "none",
           msOverflowStyle: "none",
@@ -99,7 +98,7 @@ export default function Testimonials() {
               border: "1px solid #03fc62",
               borderRadius: "12px",
               padding: "1.2rem",
-              display: "inline-flex",
+              display: "flex",
               flexDirection: "column",
               alignItems: "center",
               textDecoration: "none",
@@ -107,7 +106,7 @@ export default function Testimonials() {
               boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
               transition: "transform 0.15s",
               minWidth: "270px",
-              maxWidth: "320px"
+              width: "320px"
             }}
             onMouseOver={e => (e.currentTarget.style.transform = "scale(1.04)")}
             onMouseOut={e => (e.currentTarget.style.transform = "scale(1)")}
@@ -115,11 +114,11 @@ export default function Testimonials() {
             <img
               src={t.avatar}
               alt={t.name}
-              style={{ width: 48, height: 48, borderRadius: "50%", marginBottom: "0.8rem", border: "2px solid #03fc62" }}
+              style={{ width: 48, height: 48, borderRadius: "50%", marginBottom: "0.8rem", border: "2px solid #03fc62", objectFit: "cover", background: "#222" }}
             />
             <div style={{ fontWeight: "bold", color: "#03fc62", marginBottom: "0.3rem" }}>{t.name}</div>
             <div style={{ fontSize: "0.95rem", color: "#aaa", marginBottom: "0.7rem" }}>{t.handle}</div>
-            <p style={{ fontSize: "0.95rem", textAlign: "left", wordBreak: "break-word", lineHeight: "1.5", margin: 0 }}>
+            <p style={{ fontSize: "1rem", textAlign: "left", wordBreak: "break-word", lineHeight: "1.5", margin: 0, whiteSpace: "normal" }}>
               {t.text}
             </p>
           </a>
