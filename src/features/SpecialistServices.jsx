@@ -72,11 +72,11 @@ export default function SpecialistServices() {
             onMouseOver={() => setHovered(i)}
             onMouseOut={() => setHovered(-1)}
           >
-            <h3 style={{ color: "#03fc62", fontWeight: "bold", marginBottom: "1rem", fontSize: "1.3rem" }}>{service.title}</h3>
+            <h3 style={{ color: "#fff", fontWeight: "bold", marginBottom: "1rem", fontSize: "1.3rem" }}>{service.title}</h3>
             <p style={{ marginBottom: "1.2rem", fontSize: "1rem", color: "#fff" }}>{service.description}</p>
-            <ul style={{ listStyle: "none", padding: 0, margin: 0, color: "#03fc62", fontSize: "0.98rem", textAlign: "left", width: "100%" }}>
+            <ul style={{ listStyle: "none", padding: 0, margin: 0, color: "#fff", fontSize: "0.98rem", textAlign: "left", width: "100%" }}>
               {service.bullets.map((b, idx) => (
-                <li key={idx} style={{ marginBottom: "0.5rem", paddingLeft: "0.5rem", position: "relative" }}>
+                <li key={idx} style={{ marginBottom: "0.5rem", paddingLeft: "0.5rem", position: "relative", color: "#fff" }}>
                   <span style={{ color: "#03fc62", fontWeight: "bold", marginRight: "0.5rem" }}>•</span>{b}
                 </li>
               ))}

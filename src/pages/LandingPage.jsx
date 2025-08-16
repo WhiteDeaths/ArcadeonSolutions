@@ -33,92 +33,91 @@ export default function LandingPage() {
         zIndex: 100,
         display: "flex",
         alignItems: "center",
-        justifyContent: "flex-start",
-        padding: "0.7rem 0 0.7rem 2rem"
+        justifyContent: "space-between",
+        padding: "0.7rem 2rem"
       }}>
-        <button
-          style={{
-            background: "none",
-            color: "#03fc62",
-            border: "none",
-            fontWeight: "bold",
-            fontSize: "1.1rem",
-            marginRight: "1.5rem",
-            cursor: "pointer",
-            padding: "0.5rem 1rem",
-            borderRadius: "8px",
-            transition: "background 0.15s"
-          }}
-          onClick={() => scrollTo(servicesRef)}
-        >
-          Services
-        </button>
-        <button
-          style={{
-            background: "none",
-            color: "#03fc62",
-            border: "none",
-            fontWeight: "bold",
-            fontSize: "1.1rem",
-            marginRight: "1.5rem",
-            cursor: "pointer",
-            padding: "0.5rem 1rem",
-            borderRadius: "8px",
-            transition: "background 0.15s"
-          }}
-          onClick={() => scrollTo(whyRef)}
-        >
-          Why Choose Us
-        </button>
-        <button
-          style={{
-            background: "none",
-            color: "#03fc62",
-            border: "none",
-            fontWeight: "bold",
-            fontSize: "1.1rem",
-            marginRight: "1.5rem",
-            cursor: "pointer",
-            padding: "0.5rem 1rem",
-            borderRadius: "8px",
-            transition: "background 0.15s"
-          }}
-          onClick={() => scrollTo(quoteRef)}
-        >
-          Get A Quote
-        </button>
-        <button
-          style={{
-            background: "#222",
-            color: "#03fc62",
-            border: "1px solid #03fc62",
-            borderRadius: "8px",
-            padding: "0.5rem 1.2rem",
-            fontWeight: "bold",
-            fontSize: "1rem",
-            cursor: "pointer",
-            marginLeft: "2rem"
-          }}
-          onClick={() => navigate("/login")}
-        >
-          Log In
-        </button>
-        <button
-          style={{
-            background: "#222",
-            color: "#03fc62",
-            border: "1px solid #03fc62",
-            borderRadius: "8px",
-            padding: "0.5rem 1.2rem",
-            fontWeight: "bold",
-            fontSize: "1rem",
-            cursor: "pointer",
-            marginLeft: "0.7rem"
-          }}
-          onClick={() => navigate("/register")}
-        >
-          Sign Up
-        </button>
+        <div style={{ display: "flex", gap: "1.5rem" }}>
+          <button
+            style={{
+              background: "none",
+              color: "#03fc62",
+              border: "none",
+              fontWeight: "bold",
+              fontSize: "1.1rem",
+              cursor: "pointer",
+              padding: "0.5rem 1rem",
+              borderRadius: "8px",
+              transition: "background 0.15s"
+            }}
+            onClick={() => scrollTo(servicesRef)}
+          >
+            Services
+          </button>
+          <button
+            style={{
+              background: "none",
+              color: "#03fc62",
+              border: "none",
+              fontWeight: "bold",
+              fontSize: "1.1rem",
+              cursor: "pointer",
+              padding: "0.5rem 1rem",
+              borderRadius: "8px",
+              transition: "background 0.15s"
+            }}
+            onClick={() => scrollTo(whyRef)}
+          >
+            Why Choose Us
+          </button>
+          <button
+            style={{
+              background: "none",
+              color: "#03fc62",
+              border: "none",
+              fontWeight: "bold",
+              fontSize: "1.1rem",
+              cursor: "pointer",
+              padding: "0.5rem 1rem",
+              borderRadius: "8px",
+              transition: "background 0.15s"
+            }}
+            onClick={() => scrollTo(quoteRef)}
+          >
+            Get A Quote
+          </button>
+        </div>
+        <div style={{ display: "flex", gap: "0.7rem" }}>
+          <button
+            style={{
+              background: "#222",
+              color: "#03fc62",
+              border: "1px solid #03fc62",
+              borderRadius: "8px",
+              padding: "0.5rem 1.2rem",
+              fontWeight: "bold",
+              fontSize: "1rem",
+              cursor: "pointer"
+            }}
+            onClick={() => navigate("/login")}
+          >
+            Log In
+          </button>
+          <button
+            style={{
+              background: "#222",
+              color: "#03fc62",
+              border: "1px solid #03fc62",
+              borderRadius: "8px",
+              padding: "0.5rem 1.2rem",
+              fontWeight: "bold",
+              fontSize: "1rem",
+              cursor: "pointer"
+            }}
+            onClick={() => navigate("/register")}
+          >
+            Sign Up
+          </button>
+        </div>
       </div>
       {/* Accents */}
       <div style={{
@@ -200,6 +199,9 @@ export default function LandingPage() {
           Rapid project initiation and agile delivery methodology ensuring your solutions are delivered faster than ever.
         </p>
       </div>
+      <div style={{ maxWidth: "100%" }}>
+        <Testimonials />
+      </div>
       {/* Get A Quote Section */}
       <div ref={quoteRef} style={{ padding: "3rem 0", background: "#181818", color: "#fff", textAlign: "center" }}>
         <h2 style={{ color: "#03fc62", fontWeight: "bold", marginBottom: "1.5rem", fontSize: "2rem" }}>Get A Quote</h2>
@@ -208,7 +210,7 @@ export default function LandingPage() {
           <a href="mailto:hello@arcadeon.com" style={{ color: "#03fc62", fontWeight: "bold", textDecoration: "none" }}>hello@arcadeon.com</a> | <span style={{ color: "#03fc62", fontWeight: "bold" }}>+1 (555) 123-4567</span>
         </p>
       </div>
-      <div style={{ maxWidth: "100vw", overflow: "hidden" }}>
+      <div style={{ maxWidth: "100%" }}>
         <Testimonials />
       </div>
 

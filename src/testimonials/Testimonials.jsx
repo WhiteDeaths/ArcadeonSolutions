@@ -68,11 +68,11 @@ export default function Testimonials() {
   return (
     <div style={{
       background: "#222",
-      borderRadius: "16px",
-      padding: "2rem",
-      boxShadow: "0 4px 24px rgba(0,0,0,0.2)",
-      maxWidth: "1100px",
-      margin: "2rem auto"
+      borderRadius: "20px",
+      padding: "2.7rem 2.2rem",
+      boxShadow: "0 4px 32px rgba(0,0,0,0.22)",
+      maxWidth: "1250px",
+      margin: "2.5rem auto"
     }}>
       <h2 style={{ color: "#03fc62", textAlign: "center", marginBottom: "2rem", fontWeight: "bold" }}>
         Wall of Love
