@@ -35,12 +35,11 @@ export default function LandingPage() {
         zIndex: 100,
         display: "flex",
         alignItems: "center",
-        justifyContent: "flex-end",
+        justifyContent: "space-between",
         padding: "0.7rem 2rem"
       }}>
-        <img src="/arcadeon-logo-text.svg" alt="Arcadeon Logo" style={{ height: "40px", marginRight: "2.5rem" }} />
-        <div style={{ flex: 1 }} />
-        <div style={{ display: "flex", gap: "1.1rem", flexWrap: "nowrap" }}>
+        <img src="/arcadeon-logo-text.svg" alt="Arcadeon Logo" style={{ height: "40px" }} />
+        <div style={{ display: "flex", gap: "0.8rem", flexWrap: "nowrap", overflowX: "auto", maxWidth: "70vw" }}>
           <button
             style={{
               background: "none",
