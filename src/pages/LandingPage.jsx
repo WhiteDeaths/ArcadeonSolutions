@@ -35,8 +35,9 @@ export default function LandingPage() {
         display: "flex",
         alignItems: "center",
         justifyContent: "flex-start",
-        padding: "0.7rem 1rem",
-        flexWrap: "wrap"
+        padding: "0.7rem 0.5rem",
+        flexWrap: "wrap",
+        boxSizing: "border-box"
       }}>
         <div style={{ display: "flex", alignItems: "center", gap: "1.2rem" }}>
           <img src="/arcadeon-logo-text.svg" alt="Arcadeon Logo" style={{ height: "40px" }} />
@@ -92,7 +93,7 @@ export default function LandingPage() {
           </div>
         </div>
   <div style={{ flex: 1 }} />
-  <div style={{ display: "flex", gap: "0.8rem", flexWrap: "wrap", minWidth: "180px" }}>
+  <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap", minWidth: "120px", maxWidth: "100%" }}>
           <button
             style={{
               background: "#222",
@@ -194,7 +195,7 @@ export default function LandingPage() {
         <h2 style={{ color: "#03fc62", fontWeight: "bold", marginBottom: "1.5rem", fontSize: "2rem" }}>Get A Quote</h2>
         <p style={{ maxWidth: "700px", margin: "0 auto", fontSize: "1.1rem" }}>
           Ready to transform your IT infrastructure? Get in touch with our specialists to discuss your project requirements and discover how Arcadeon can accelerate your success.<br />
-          <a href="mailto:james.upson@arcadeon.co.uk" style={{ color: "#03fc62", fontWeight: "bold", textDecoration: "none" }}>james.upson@arcadeon.co.uk</a> | <span style={{ color: "#03fc62", fontWeight: "bold" }}>+1 (555) 123-4567</span>
+          <a href="mailto:james.upson@arcadeon.co.uk" style={{ color: "#03fc62", fontWeight: "bold", textDecoration: "none" }}>james.upson@arcadeon.co.uk</a> | <span style={{ color: "#03fc62", fontWeight: "bold" }}>+44 (555) 123-4567</span>
         </p>
       </div>
       <div style={{ maxWidth: "100%" }}>
