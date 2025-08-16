@@ -120,15 +120,6 @@ export default function LandingPage() {
         </div>
       </div>
       {/* Accents */}
-  {/* Top accent removed to avoid overlap with Specialist Services */}
-      <div style={{
-        position: "absolute",
-        bottom: 0,
-        right: 0,
-        width: "100%",
-        height: "2px",
-        background: "#03fc62"
-      }} />
       {/* Top right boxes */}
       <div style={{
         position: "absolute",
