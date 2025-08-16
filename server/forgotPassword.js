@@ -6,7 +6,7 @@ const rateLimit = require('express-rate-limit');
 const { createClient } = require('@supabase/supabase-js');
 
 const supabaseUrl = 'https://stkfhbalhkhkftqdbnqd.supabase.co';
-const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN0a2ZoYmFsaGtoa2Z0cWRibnFkIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1NTMxNTMyOCwiZXhwIjoyMDcwODkxMzI4fQ.I7xfHXrEOwVyyPtVxDi11-ln-s8hRop2ICzjVCzkUHY'; // Replace with your actual service role key from Supabase dashboard
+const supabaseKey = '[your-key-here]'; // Replace with your actual service role key from Supabase dashboard
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 const router = express.Router();

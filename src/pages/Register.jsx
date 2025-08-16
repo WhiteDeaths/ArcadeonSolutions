@@ -5,7 +5,7 @@ import speakeasy from "speakeasy";
 import { supabase } from "../supabaseClient";
 
 const supabaseUrl = 'https://stkfhbalhkhkftqdbnqd.supabase.co';
-const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN0a2ZoYmFsaGtoa2Z0cWRibnFkIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1NTMxNTMyOCwiZXhwIjoyMDcwODkxMzI4fQ.I7xfHXrEOwVyyPtVxDi11-ln-s8hRop2ICzjVCzkUHY'; // Get this from Supabase dashboard > Project Settings > API
+const supabaseKey = '[you-key-here]'; // Get this from Supabase dashboard > Project Settings > API
 
 export default function Register() {
   const [username, setUsername] = useState("");
