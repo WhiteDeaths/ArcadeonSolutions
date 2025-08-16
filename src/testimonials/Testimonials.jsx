@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 
-const genericAvatar = "https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png";
+const genericAvatar = "https://ui-avatars.com/api/?background=222&color=03fc62&name=User";
 
 const testimonials = [
   {
@@ -119,7 +119,7 @@ export default function Testimonials() {
             />
             <div style={{ fontWeight: "bold", color: "#03fc62", marginBottom: "0.3rem" }}>{t.name}</div>
             <div style={{ fontSize: "0.95rem", color: "#aaa", marginBottom: "0.7rem" }}>{t.handle}</div>
-            <div style={{ fontSize: "1.05rem", textAlign: "center" }}>
+            <div style={{ fontSize: "0.95rem", textAlign: "center", wordBreak: "break-word", lineHeight: "1.3", maxHeight: "3.5em", overflow: "hidden" }}>
               {t.text}
             </div>
           </a>
