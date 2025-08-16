@@ -1,6 +1,64 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function Register() {
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [errors, setErrors] = useState({});
+  const [success, setSuccess] = useState("");
+
+  // Helper validation functions
+  const validateUsername = (name) => {
+    if (!name.trim()) return "Username is required.";
+    if (/[^a-zA-Z\s]/.test(name)) return "Username must not contain digits or special characters.";
+    if (name.length < 2) return "Username must be at least 2 characters.";
+    if (name.length > 32) return "Username must be less than 32 characters.";
+    return "";
+  };
+  const validateEmail = (mail) => {
+    if (!mail.trim()) return "Email is required.";
+    if (!/^([a-zA-Z0-9_\.-]+)@([a-zA-Z0-9\.-]+)\.([a-zA-Z]{2,})$/.test(mail)) return "Invalid email format.";
+    // Simulate uniqueness check
+    if (mail.toLowerCase() === "test@example.com") return "Email already exists.";
+    return "";
+  };
+  const validatePassword = (pw) => {
+    if (!pw) return "Password is required.";
+    if (pw.length < 8) return "Password must be at least 8 characters.";
+    if (pw.length > 32) return "Password must be less than 32 characters.";
+    if (!/[A-Z]/.test(pw)) return "Password must contain an uppercase letter.";
+    if (!/[a-z]/.test(pw)) return "Password must contain a lowercase letter.";
+    if (!/[0-9]/.test(pw)) return "Password must contain a digit.";
+    if (!/[!@#$%^&*(),.?":{}|<>]/.test(pw)) return "Password must contain a special character.";
+    return "";
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setErrors({});
+    setSuccess("");
+    // Trim inputs
+    const trimmedUsername = username.trim();
+    const trimmedEmail = email.trim();
+    const trimmedPassword = password.trim();
+    // Validate fields
+    const usernameError = validateUsername(trimmedUsername);
+    const emailError = validateEmail(trimmedEmail);
+    const passwordError = validatePassword(trimmedPassword);
+    const newErrors = {};
+    if (usernameError) newErrors.username = usernameError;
+    if (emailError) newErrors.email = emailError;
+    if (passwordError) newErrors.password = passwordError;
+    setErrors(newErrors);
+    if (Object.keys(newErrors).length === 0) {
+      // Simulate successful registration
+      setSuccess("Registration successful! Activation email sent.");
+      setUsername("");
+      setEmail("");
+      setPassword("");
+    }
+  };
+
   return (
     <div style={{
       minHeight: "100vh",
@@ -57,55 +115,71 @@ export default function Register() {
           }} />
           <div style={{ width: "100%", textAlign: "center" }}>
             <h2 style={{ color: "#fff", marginTop: 30, marginBottom: -20 }}>Create an Account</h2>
-            <form style={{ display: "flex", flexDirection: "column", marginTop: 30 }}>
+            <form style={{ display: "flex", flexDirection: "column", marginTop: 30 }} onSubmit={handleSubmit} noValidate>
               <input
                 type="text"
                 name="username"
                 required
                 placeholder="Username"
+                value={username}
+                onChange={e => setUsername(e.target.value)}
                 style={{
                   padding: "14px 12px",
                   marginTop: 30,
                   border: "none",
                   borderRadius: 10,
                   background: "transparent",
-                  border: "1px solid #03fc62",
+                  border: errors.username ? "2px solid #ff4d4f" : "1px solid #03fc62",
                   color: "#fff",
                   fontSize: 15
                 }}
+                aria-invalid={!!errors.username}
+                aria-describedby="username-error"
               />
+              {errors.username && <div id="username-error" style={{ color: "#ff4d4f", fontSize: 13, marginTop: 4, textAlign: "left" }}>{errors.username}</div>}
               <input
                 type="email"
                 name="email"
                 required
                 placeholder="Email Address"
+                value={email}
+                onChange={e => setEmail(e.target.value)}
                 style={{
                   padding: "14px 12px",
                   marginTop: 24,
                   border: "none",
                   borderRadius: 10,
                   background: "transparent",
-                  border: "1px solid #03fc62",
+                  border: errors.email ? "2px solid #ff4d4f" : "1px solid #03fc62",
                   color: "#fff",
                   fontSize: 15
                 }}
+                aria-invalid={!!errors.email}
+                aria-describedby="email-error"
               />
+              {errors.email && <div id="email-error" style={{ color: "#ff4d4f", fontSize: 13, marginTop: 4, textAlign: "left" }}>{errors.email}</div>}
               <input
                 type="password"
                 name="password"
                 required
                 placeholder="Password"
+                value={password}
+                onChange={e => setPassword(e.target.value)}
                 style={{
                   padding: "14px 12px",
                   marginTop: 24,
                   border: "none",
                   borderRadius: 10,
                   background: "transparent",
-                  border: "1px solid #03fc62",
+                  border: errors.password ? "2px solid #ff4d4f" : "1px solid #03fc62",
                   color: "#fff",
                   fontSize: 15
                 }}
+                aria-invalid={!!errors.password}
+                aria-describedby="password-error"
+                autoComplete="new-password"
               />
+              {errors.password && <div id="password-error" style={{ color: "#ff4d4f", fontSize: 13, marginTop: 4, textAlign: "left" }}>{errors.password}</div>}
               <button
                 type="submit"
                 style={{
@@ -119,9 +193,11 @@ export default function Register() {
                   fontWeight: "bold",
                   fontSize: 16
                 }}
+                disabled={Object.keys(errors).length > 0}
               >
                 Register
               </button>
+              {success && <div style={{ color: "#03fc62", fontSize: 14, marginTop: 18 }}>{success}</div>}
             </form>
           </div>
         </div>
