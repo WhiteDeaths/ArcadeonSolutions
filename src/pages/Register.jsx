@@ -151,8 +151,7 @@ export default function Register() {
                     onChange={e => setUsername(e.target.value)}
                     style={{
                       padding: "14px 12px",
-                      marginTop: 30,
-                      border: "none",
+                      marginTop: 24,
                       borderRadius: 10,
                       background: "transparent",
                       border: errors.username ? "2px solid #ff4d4f" : "1px solid #03fc62",

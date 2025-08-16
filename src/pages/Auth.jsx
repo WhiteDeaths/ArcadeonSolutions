@@ -68,7 +68,6 @@ export default function Auth() {
                 style={{
                   padding: "14px 12px",
                   marginTop: 30,
-                  border: "none",
                   borderRadius: 10,
                   background: "transparent",
                   border: "1px solid #03fc62",
@@ -83,8 +82,7 @@ export default function Auth() {
                 placeholder="Password"
                 style={{
                   padding: "14px 12px",
-                  marginTop: 24,
-                  border: "none",
+                  marginTop: 30,
                   borderRadius: 10,
                   background: "transparent",
                   border: "1px solid #03fc62",
