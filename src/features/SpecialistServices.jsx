@@ -41,7 +41,7 @@ export default function SpecialistServices() {
       padding: "3rem 0",
       color: "#fff"
     }}>
-      <h2 style={{ textAlign: "center", color: "#03fc62", fontWeight: "bold", marginBottom: "2.5rem", fontSize: "2rem" }}>
+      <h2 style={{ textAlign: "center", color: "#fff", fontWeight: "bold", marginBottom: "2.5rem", fontSize: "2rem" }}>
         Our Specialist Services
       </h2>
       <div style={{

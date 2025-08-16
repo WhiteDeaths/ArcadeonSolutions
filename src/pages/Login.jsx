@@ -43,7 +43,8 @@ export default function Login() {
           <input type="text" value={token} onChange={e => setToken(e.target.value)} placeholder="2FA Code" style={{ width: "90%", maxWidth: "260px", padding: "0.95rem", borderRadius: "10px", border: "1.5px solid #03fc62", fontSize: "1.08rem", background: "#181818", color: "#fff", margin: "0 auto", textAlign: "center" }} />
           <button type="submit" style={{ background: "#03fc62", color: "#222", border: "none", borderRadius: "8px", padding: "0.85rem 1.2rem", fontWeight: "bold", fontSize: "1.08rem", cursor: "pointer", width: "90%", margin: "2rem auto 0 auto" }} disabled={!email || !password || !token || loading}>{loading ? "Logging in..." : "Sign In"}</button>
         </form>
-        <button style={{ marginTop: "1.1rem", background: "none", color: "#03fc62", border: "1px solid #03fc62", borderRadius: "8px", padding: "0.6rem 1.2rem", fontWeight: "bold", fontSize: "1.08rem", cursor: "pointer", width: "90%", margin: "0 auto" }} onClick={() => window.location.href = "/forgot-password"}>Forgot Password?</button>
+        <div style={{ height: "1.5rem" }} />
+        <button style={{ marginTop: "0", background: "none", color: "#03fc62", border: "1px solid #03fc62", borderRadius: "8px", padding: "0.6rem 1.2rem", fontWeight: "bold", fontSize: "1.08rem", cursor: "pointer", width: "90%", margin: "0 auto" }} onClick={() => window.location.href = "/forgot-password"}>Forgot Password?</button>
         {error && (
           <div style={{
             position: "absolute",
