@@ -20,22 +20,21 @@ export default function LandingPage() {
       minHeight: "100vh",
       background: "#181818",
       position: "relative",
-      fontFamily: "sans-serif",
-      overflowX: "hidden"
+      fontFamily: "sans-serif"
     }}>
       {/* Sticky Top Bar */}
       <div style={{
         position: "sticky",
         top: 0,
         left: 0,
-        width: "100vw",
+        width: "100%",
         background: "#222",
         borderBottom: "2px solid #03fc62",
         zIndex: 100,
         display: "flex",
         alignItems: "center",
-        justifyContent: "center",
-        padding: "0.7rem 0"
+        justifyContent: "flex-start",
+        padding: "0.7rem 0 0.7rem 2rem"
       }}>
         <button
           style={{
@@ -44,7 +43,7 @@ export default function LandingPage() {
             border: "none",
             fontWeight: "bold",
             fontSize: "1.1rem",
-            margin: "0 1.5rem",
+            marginRight: "1.5rem",
             cursor: "pointer",
             padding: "0.5rem 1rem",
             borderRadius: "8px",
@@ -61,7 +60,7 @@ export default function LandingPage() {
             border: "none",
             fontWeight: "bold",
             fontSize: "1.1rem",
-            margin: "0 1.5rem",
+            marginRight: "1.5rem",
             cursor: "pointer",
             padding: "0.5rem 1rem",
             borderRadius: "8px",
@@ -78,7 +77,7 @@ export default function LandingPage() {
             border: "none",
             fontWeight: "bold",
             fontSize: "1.1rem",
-            margin: "0 1.5rem",
+            marginRight: "1.5rem",
             cursor: "pointer",
             padding: "0.5rem 1rem",
             borderRadius: "8px",
@@ -88,13 +87,45 @@ export default function LandingPage() {
         >
           Get A Quote
         </button>
+        <button
+          style={{
+            background: "#222",
+            color: "#03fc62",
+            border: "1px solid #03fc62",
+            borderRadius: "8px",
+            padding: "0.5rem 1.2rem",
+            fontWeight: "bold",
+            fontSize: "1rem",
+            cursor: "pointer",
+            marginLeft: "2rem"
+          }}
+          onClick={() => navigate("/login")}
+        >
+          Log In
+        </button>
+        <button
+          style={{
+            background: "#222",
+            color: "#03fc62",
+            border: "1px solid #03fc62",
+            borderRadius: "8px",
+            padding: "0.5rem 1.2rem",
+            fontWeight: "bold",
+            fontSize: "1rem",
+            cursor: "pointer",
+            marginLeft: "0.7rem"
+          }}
+          onClick={() => navigate("/register")}
+        >
+          Sign Up
+        </button>
       </div>
       {/* Accents */}
       <div style={{
         position: "absolute",
         top: 0,
         left: 0,
-        width: "100vw",
+        width: "100%",
         height: "4px",
         background: "#03fc62"
       }} />
@@ -102,7 +133,7 @@ export default function LandingPage() {
         position: "absolute",
         bottom: 0,
         right: 0,
-        width: "100vw",
+        width: "100%",
         height: "2px",
         background: "#03fc62"
       }} />
@@ -180,6 +211,72 @@ export default function LandingPage() {
       <div style={{ maxWidth: "100vw", overflow: "hidden" }}>
         <Testimonials />
       </div>
+
+      {/* Bottom Bar */}
+      <footer style={{
+        width: "100%",
+        background: "#222",
+        borderTop: "2px solid #03fc62",
+        color: "#fff",
+        padding: "2.5rem 0 1.2rem 0",
+        marginTop: "3rem",
+        fontSize: "1rem",
+        boxShadow: "0 -2px 16px rgba(3,252,98,0.08)",
+      }}>
+        <div style={{
+          maxWidth: "1200px",
+          margin: "0 auto",
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "space-between",
+          alignItems: "flex-start",
+          gap: "2rem"
+        }}>
+          <div>
+            <h3 style={{ color: "#03fc62", fontWeight: "bold", marginBottom: "0.7rem" }}>Arcadeon</h3>
+            <div style={{ maxWidth: "320px", lineHeight: "1.5" }}>
+              Leading provider of software development and IT consulting services, delivering innovative solutions to enterprises, startups, and individual clients worldwide.
+            </div>
+          </div>
+          <div>
+            <h4 style={{ color: "#03fc62", fontWeight: "bold", marginBottom: "0.5rem" }}>Services</h4>
+            <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+              <li>Software Development</li>
+              <li>IT Consulting</li>
+              <li>Enterprise Solutions</li>
+            </ul>
+          </div>
+          <div>
+            <h4 style={{ color: "#03fc62", fontWeight: "bold", marginBottom: "0.5rem" }}>Company</h4>
+            <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+              <li>About Us</li>
+              <li>Contact</li>
+              <li>Careers</li>
+            </ul>
+          </div>
+          <div>
+            <h4 style={{ color: "#03fc62", fontWeight: "bold", marginBottom: "0.5rem" }}>Contact</h4>
+            <div style={{ lineHeight: "1.5" }}>
+              <a href="mailto:hello@arcadeon.com" style={{ color: "#03fc62", textDecoration: "none", fontWeight: "bold" }}>hello@arcadeon.com</a><br />
+              <span style={{ color: "#03fc62", fontWeight: "bold" }}>+1 (555) 123-4567</span>
+            </div>
+          </div>
+        </div>
+        <div style={{
+          maxWidth: "1200px",
+          margin: "2rem auto 0 auto",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          fontSize: "0.95rem",
+          color: "#aaa"
+        }}>
+          <span>© 2025 Arcadeon. All rights reserved.</span>
+          <span>
+            Made with <a href="https://app.emergent.sh/?utm_source=emergent-badge" style={{ color: "#03fc62", textDecoration: "none" }}>Emergent</a>
+          </span>
+        </div>
+      </footer>
     </div>
   );
 }
