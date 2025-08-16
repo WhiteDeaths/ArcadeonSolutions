@@ -119,9 +119,9 @@ export default function Testimonials() {
             />
             <div style={{ fontWeight: "bold", color: "#03fc62", marginBottom: "0.3rem" }}>{t.name}</div>
             <div style={{ fontSize: "0.95rem", color: "#aaa", marginBottom: "0.7rem" }}>{t.handle}</div>
-            <div style={{ fontSize: "0.85rem", textAlign: "center", wordBreak: "break-word", lineHeight: "1.3", maxHeight: "4.5em", overflow: "hidden" }}>
+            <p style={{ fontSize: "0.95rem", textAlign: "left", wordBreak: "break-word", lineHeight: "1.5", margin: 0 }}>
               {t.text}
-            </div>
+            </p>
           </a>
         ))}
       </div>
